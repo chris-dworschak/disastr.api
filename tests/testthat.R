@@ -1,4 +1,4 @@
 library(testthat)
-library(acled.api)
+library(disastr.api)
 
-test_check("acled.api")
+test_check("disastr.api")
