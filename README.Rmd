@@ -23,7 +23,7 @@ usethis::use_cran_badge()
 usethis::use_lifecycle_badge("maturing")
 ```
 [![CRAN status](https://www.r-pkg.org/badges/version/disastr.api)](https://CRAN.R-project.org/package=disastr.api)
-[![Travis build status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](https://travis-ci.com/chris-dworschak/disastr.api)
+[![Travis build status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](https://travis-ci.com/github/chris-dworschak/disastr.api)
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
@@ -54,10 +54,10 @@ Using `disastr.api` is straight forward. To download data on, for example, the l
 
 
 ```{r example}
-# library(disastr.api) # loads the package
+library(disastr.api) # loads the package
 
-# my.data.frame <- disastr.api( # stores retrieved disaster events in object my.data.frame
-#   limit = 30)
+my.data.frame <- disastr.api( # stores retrieved disaster events in object my.data.frame
+  limit = 30)
 
-# head(my.data.frame) # returns the first five observations of the ACLED sample
+head(my.data.frame) # returns the first five observations of the ACLED sample
 ```
