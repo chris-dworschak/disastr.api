@@ -1,0 +1,67 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+
+# Automated Retrieval of ACLED Conflict Event Data
+
+<!-- badges: start -->
+```{r, include = FALSE}
+usethis::use_cran_badge()
+usethis::use_lifecycle_badge("maturing")
+```
+[![CRAN status](https://www.r-pkg.org/badges/version/acled.api)](https://CRAN.R-project.org/package=acled.api)
+[![Travis build status](https://travis-ci.com/chris-dworschak/acled.api.svg?branch=master)](https://travis-ci.com/chris-dworschak/acled.api)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+<!-- badges: end -->
+
+This small package provides functionality to access and manage the application programming interface (API) of the [Armed Conflict Location & Event Data Project (ACLED)](https://acleddata.com/). The function `acled.api()` makes it easy to retrieve a user-defined sample (or all of the available data) of ACLED, enabling a seamless integration of regular data updates into the research work flow. 
+
+When using this package, you acknowledge that you have read ACLED's terms and conditions of use, and that you agree with their attribution requirements.
+
+
+
+
+## Installation
+
+You can install the released version of acled.api from [CRAN](https://CRAN.R-project.org) with: 
+
+``` r
+install.packages("acled.api")
+```
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("chris-dworschak/acled.api") # downloads and installs the package
+```
+
+
+## Example
+
+Using `acled.api` is straight forward. To download data on, for example, all ACLED conflict events in Europe and Central America that happened between June 2019 and July 2020, you can supply:
+
+
+```{r example}
+library(acled.api) # loads the package
+
+my.data.frame <- acled.api( # stores an ACLED sample in object my.data.frame
+  region = c("Southern Asia", "Central America"), 
+  start.date = "2019-06-01", 
+  end.date = "2020-07-31")
+
+head(my.data.frame) # returns the first five observations of the ACLED sample
+```
