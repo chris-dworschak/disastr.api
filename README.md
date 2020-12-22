@@ -13,9 +13,9 @@ status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](ht
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
-This small package provides functionality to access and manage the
-application programming interface (API) of the [United Nations Office
-for the Coordination of Humanitarian Affairs’ (OCHA) ReliefWeb disaster
+This package provides functionality to access and manage the application
+programming interface (API) of the [United Nations Office for the
+Coordination of Humanitarian Affairs’ (OCHA) ReliefWeb disaster
 events](https://reliefweb.int/disasters/). The function `disastr.api()`
 makes it easy to retrieve a user-defined sample (or all of the available
 data) from ReliefWeb, enabling a seamless integration of regular data
@@ -51,22 +51,43 @@ library(disastr.api) # loads the package
 #> Development version 1.0.0.
 
 my.data.frame <- disastr.api( # stores retrieved disaster events in object my.data.frame
-  limit = 30)
+  limit = 20)
 #> Your disaster event data request was successful.
 
 head(my.data.frame) # returns the first five observations of the ACLED sample
-#>      id                      date      country                             name
-#> 1 50440 2020-09-07T00:00:00+00:00      Senegal       Senegal: Floods - Sep 2020
-#> 2 50443 2020-09-06T00:00:00+00:00       Guinea        Guinea: Floods - Sep 2020
-#> 3 50438 2020-09-05T00:00:00+00:00 Burkina Faso  Burkina Faso: Floods - Sep 2020
-#> 4 50441 2020-09-01T00:00:00+00:00   Mauritania    Mauritania: Floods - Sep 2020
-#> 5 50421 2020-08-20T00:00:00+00:00         Chad          Chad: Floods - Aug 2020
-#> 6 50435 2020-08-14T00:00:00+00:00        Yemen Yemen: Polio Outbreak - Aug 2020
-#>      event  status                                       url
-#> 1    Flood current https://reliefweb.int/taxonomy/term/50440
-#> 2    Flood current https://reliefweb.int/taxonomy/term/50443
-#> 3    Flood current https://reliefweb.int/taxonomy/term/50438
-#> 4    Flood current https://reliefweb.int/taxonomy/term/50441
-#> 5    Flood current https://reliefweb.int/taxonomy/term/50421
-#> 6 Epidemic   alert https://reliefweb.int/taxonomy/term/50435
+#>      id                      date
+#> 1 50539 2020-12-17T00:00:00+00:00
+#> 2 50536 2020-12-02T00:00:00+00:00
+#> 3 50532 2020-11-27T00:00:00+00:00
+#> 4 50513 2020-11-22T00:00:00+00:00
+#> 5 50506 2020-11-15T00:00:00+00:00
+#> 6 50498 2020-11-10T00:00:00+00:00
+#>                                                                  country
+#> 1                                                          Fiji, Vanuatu
+#> 2                                                              Sri Lanka
+#> 3                                                              Indonesia
+#> 4                                                         Somalia, Yemen
+#> 5 Belize, Colombia, El Salvador, Guatemala, Honduras, Jamaica, Nicaragua
+#> 6          Lao People's Democratic Republic (the), Philippines, Viet Nam
+#>                                          name
+#> 1            Tropical Cyclone Yasa - Dec 2020
+#> 2                Sri Lanka: Floods - Dec 2020
+#> 3 Indonesia: Ili Lewotolok Volcano - Nov 2020
+#> 4            Tropical Cyclone Gati - Nov 2020
+#> 5                   Hurricane Iota - Nov 2020
+#> 6                    Typhoon Vamco - Nov 2020
+#>                                  event  status
+#> 1 Flash Flood, Flood, Tropical Cyclone current
+#> 2                                Flood current
+#> 3                              Volcano current
+#> 4        Flash Flood, Tropical Cyclone current
+#> 5  Flood, Land Slide, Tropical Cyclone current
+#> 6  Flood, Land Slide, Tropical Cyclone current
+#>                                         url
+#> 1 https://reliefweb.int/taxonomy/term/50539
+#> 2 https://reliefweb.int/taxonomy/term/50536
+#> 3 https://reliefweb.int/taxonomy/term/50532
+#> 4 https://reliefweb.int/taxonomy/term/50513
+#> 5 https://reliefweb.int/taxonomy/term/50506
+#> 6 https://reliefweb.int/taxonomy/term/50498
 ```

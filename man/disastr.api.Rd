@@ -4,10 +4,47 @@
 \alias{disastr.api}
 \title{Automated Retrieval of Disaster Event Data}
 \usage{
-disastr.api(limit = NULL, ascending = FALSE, other.query = NULL)
+disastr.api(
+  limit = NULL,
+  date.start = NULL,
+  date.end = NULL,
+  disaster = NULL,
+  country = NULL,
+  status = NULL,
+  exact.match = FALSE,
+  ascending = FALSE,
+  other.query = NULL
+)
 }
 \arguments{
-\item{limit}{numeric. Provide the number of events you wish to retrieve. When set to NULL (default), ten events are returned.}
+\item{limit}{numeric. Provide the number of events you wish to retrieve. When set to NULL (default), ten events are returned.
+The ReliefWeb API does not support the retrieval of more than 1000 events at once. If you wish to retrieve more than
+1000 disaster events, you need to distribute this over multiple calls (e.g., using a loop).
+Note however that the ReliefWeb API has a call quota of 1000 data requests a day.}
+
+\item{date.start}{character string. Enter the earliest date from which events should be retrieved. The date
+string must be formatted as "yyyy-mm-dd". When set to NULL (default), the sample starts with the earliest possible event.}
+
+\item{date.end}{character string. Enter the latest date up to which (and including) events should be retrieved. The date
+string must be formatted as "yyyy-mm-dd". When set to NULL (default), data are retrieved up to the latest event.}
+
+\item{disaster}{character vector. To return only specific disaster events, this argument takes a character vector of disaster
+names. Examples of typical names are "earthquake", "flood", "land slide", "wild fire". See \url{https://reliefweb.int/disasters/} for
+more disaster names that can be queried. Names are matched with loose OR operators, so that querying "land slide" also returns
+events for "mud slide". To do exact matching, set the global \emph{exact.match} argument to TRUE. In this case, only one disaster type
+and one country at a time can be queried.}
+
+\item{country}{character vector. To return only specific countries, this argument takes a character vector of country
+names. Names are matched with loose OR operators, so that querying "South Sudan" also returns events for the countries
+"South Africa" and "Sudan". To do exact matching, set the global \emph{exact.match} argument to TRUE. In this case, only one country
+and one disaster type at a time can be queried.}
+
+\item{status}{character vector. To only return events with a specific status, this argument takes a character vector of status
+terms. Possible terms are "alert", "current", and "past".}
+
+\item{exact.match}{logical. This is a rudimentary AND/OR switch. If set to FALSE (default), all terms and words in country, disaster, and status
+arguments will be matched with OR operators (possibly yielding many false positive queries). If set to TRUE, all terms are matched exactly,
+and only one term per argument at a time can be queried. Use \emph{other.query} for more complex AND/OR operations.}
 
 \item{ascending}{logical. If set to FALSE (default), events will be returned in decreasing order starting from the most
 recent. If set to TRUE, events will be returned in ascending order starting from the oldest record.}
@@ -20,19 +57,19 @@ assumed to be individual queries, and are automatically separated by an & sign.}
 A data frame containing ReliefWeb disaster events.
 }
 \description{
-This small package provides functionality to access and manage the application programming
-interface (API) of the \href{https://reliefweb.int/disasters/}{United Nations Office for the Coordination of Humanitarian Affairs' (OCHA) ReliefWeb disaster events}.
-The function \emph{\code{disastr.api()}} makes it easy to retrieve a user-defined sample (or all of the
+Access and manage the application programming
+interface (API) of the United Nations Office for the Coordination of Humanitarian Affairs' \href{https://reliefweb.int/disasters/}{OCHA ReliefWeb disaster events}.
+The function \code{disastr.api()} makes it easy to retrieve a user-defined sample (or all of the
 available data) from ReliefWeb, enabling a seamless integration of regular data updates into
 the research work flow.
 }
 \details{
-The function \emph{\code{disastr.api()}} is an R wrapper for
-the \href{https://reliefweb.int/disasters/}{United Nations Office for the Coordination of Humanitarian Affairs' (OCHA) ReliefWeb disaster events} API.
-Internally it uses \emph{\code{httr}} to access the API, and \emph{\code{jsonlite}} to manage the JSON content that the call returns. The JSON data
-are converted into the base class \emph{\code{data.frame}}. Variables are of class \emph{\code{character}} by default.
+The function \code{disastr.api()} is an R wrapper for
+the United Nations Office for the Coordination of Humanitarian Affairs' \href{https://reliefweb.int/disasters/}{OCHA ReliefWeb disaster events} API.
+Internally it uses \code{httr} to access the API, and \code{jsonlite} to manage the JSON content that the call returns. The JSON data
+are converted into the base class \code{data.frame}. Variables are of class \code{character} by default.
 Variables which only contain numbers as recognized by the regular
-expression \verb{^[0-9]+$} are coerced into \emph{\code{numeric}} before the \emph{\code{data.frame}} object is returned. \cr \cr
+expression \verb{^[0-9]+$} are coerced into \code{numeric} before the \code{data.frame} object is returned. \cr \cr
 }
 \examples{
 my.data.frame1 <- disastr.api()
