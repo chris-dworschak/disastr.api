@@ -38,7 +38,7 @@
 #' are converted into the base class `data.frame`. Variables are of class `character` by default.
 #' Variables which only contain numbers as recognized by the regular
 #' expression `^[0-9]+$` are coerced into `numeric` before the `data.frame` object is returned. \cr \cr
-#' @return A data frame containing ReliefWeb disaster events.
+#' @return A data frame containing OCHA ReliefWeb disaster events.
 #' @import jsonlite
 #' @import httr
 #' @author Christoph Dworschak \cr Website: \href{https://www.chrisdworschak.com/}{<https://chrisdworschak.com/>}

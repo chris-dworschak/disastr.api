@@ -54,7 +54,7 @@ GET call. See the \href{https://apidoc.rwlabs.org/}{ReliefWeb documentation} for
 assumed to be individual queries, and are automatically separated by an & sign.}
 }
 \value{
-A data frame containing ReliefWeb disaster events.
+A data frame containing OCHA ReliefWeb disaster events.
 }
 \description{
 Access and manage the application programming
