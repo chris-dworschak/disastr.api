@@ -17,7 +17,7 @@ disastr.api(
 )
 }
 \arguments{
-\item{limit}{numeric. Provide the number of events you wish to retrieve. When set to NULL (default), ten events are returned.
+\item{limit}{numeric. Provide the number of events you wish to retrieve. When set to NULL (default), 100 events are returned.
 The ReliefWeb API does not support the retrieval of more than 1000 events at once. If you wish to retrieve more than
 1000 disaster events, you need to distribute this over multiple calls (e.g., using a loop).
 Note however that the ReliefWeb API has a call quota of 1000 data requests a day.}
@@ -57,10 +57,9 @@ assumed to be individual queries, and are automatically separated by an & sign.}
 A data frame containing OCHA ReliefWeb disaster events.
 }
 \description{
-Access and manage the application programming
-interface (API) of the United Nations Office for the Coordination of Humanitarian Affairs' \href{https://reliefweb.int/disasters/}{OCHA ReliefWeb disaster events}.
-The function \code{disastr.api()} makes it easy to retrieve a user-defined sample (or all of the
-available data) from ReliefWeb, enabling a seamless integration of regular data updates into
+The function \code{disastr.api()} gives access to the OCHA ReliefWeb API to retrieve a
+user-defined sample of \href{https://reliefweb.int/disasters/}{disaster events},
+enabling a seamless integration of regular data updates into
 the research work flow.
 }
 \details{
@@ -75,6 +74,10 @@ expression \verb{^[0-9]+$} are coerced into \code{numeric} before the \code{data
 my.data.frame1 <- disastr.api()
 head(my.data.frame1)
 
+my.data.frame2 <- disastr.api(limit = 200,
+date.start = "2020-01-31",
+date.end = "2020-05-01")
+head(my.data.frame2)
 }
 \references{
 United Nations Office for the Coordination of Humanitarian Affairs. \emph{ReliefWeb Disasters}. \url{https://reliefweb.int/disasters/} \cr

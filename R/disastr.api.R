@@ -1,11 +1,10 @@
 #' @title Automated Retrieval of Disaster Event Data
 #' @name disastr.api
-#' @description Access and manage the application programming
-#' interface (API) of the United Nations Office for the Coordination of Humanitarian Affairs' [OCHA ReliefWeb disaster events](https://reliefweb.int/disasters/).
-#' The function `disastr.api()` makes it easy to retrieve a user-defined sample (or all of the
-#' available data) from ReliefWeb, enabling a seamless integration of regular data updates into
+#' @description The function `disastr.api()` gives access to the OCHA ReliefWeb API to retrieve a
+#' user-defined sample of [disaster events](https://reliefweb.int/disasters/),
+#' enabling a seamless integration of regular data updates into
 #' the research work flow.
-#' @param limit numeric. Provide the number of events you wish to retrieve. When set to NULL (default), ten events are returned.
+#' @param limit numeric. Provide the number of events you wish to retrieve. When set to NULL (default), 100 events are returned.
 #' The ReliefWeb API does not support the retrieval of more than 1000 events at once. If you wish to retrieve more than
 #' 1000 disaster events, you need to distribute this over multiple calls (e.g., using a loop).
 #' Note however that the ReliefWeb API has a call quota of 1000 data requests a day.
@@ -47,6 +46,10 @@
 #' my.data.frame1 <- disastr.api()
 #' head(my.data.frame1)
 #'
+#' my.data.frame2 <- disastr.api(limit = 200,
+#' date.start = "2020-01-31",
+#' date.end = "2020-05-01")
+#' head(my.data.frame2)
 #' @export
 
 disastr.api <- function(
@@ -62,7 +65,7 @@ disastr.api <- function(
 
   # limit argument
   if( is.null(limit)==TRUE | is.numeric(limit)==TRUE ){
-  limit1 <- ifelse( is.null(limit)==TRUE, "", paste0("&limit=", limit) )   }else{
+  limit1 <- ifelse( is.null(limit)==TRUE, "&limit=100", paste0("&limit=", limit) )   }else{
     stop("The argument 'limit' requires a NULL or numeric value indicating the number of events to be retrieved.", call. = FALSE)
   }
 

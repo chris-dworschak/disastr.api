@@ -5,6 +5,13 @@
 * Built-in functionality to retrieve all available events (argument all.events) through a for loop
  -->
 
+
+## disastr.api version 1.0.2
+
+* Adjustments to package & function descriptions
+* Change to default limit of retrieved events
+* Extended example for use
+ 
  
 ## disastr.api version 1.0.1
 
