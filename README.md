@@ -17,10 +17,11 @@ status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](ht
 This package provides functionality to access and manage the application
 programming interface (API) of the [United Nations Office for the
 Coordination of Humanitarian Affairs’ (OCHA) ReliefWeb disaster
-events](https://reliefweb.int/disasters/). The function `disastr.api()`
-makes it easy to retrieve a user-defined sample of disaster events from
-ReliefWeb, enabling a seamless integration of regular data updates into
-the research work flow.
+events](https://reliefweb.int/disasters/). It requires a minimal number
+of dependencies. The function `disastr.api()` makes it easy to retrieve
+a user-defined sample of disaster events from ReliefWeb, enabling a
+seamless integration of regular data updates into the research work
+flow.
 
 ## Installation
 
