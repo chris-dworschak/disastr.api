@@ -12,8 +12,6 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![Travis build
 status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](https://travis-ci.com/github/chris-dworschak/disastr.api)
 [![CRANlogs](http://cranlogs.r-pkg.org/badges/grand-total/disastr.api)](https://CRAN.R-project.org/package=disastr.api)
-[![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
 This package provides functionality to access and manage the application
@@ -51,7 +49,7 @@ library(disastr.api) # loads the package
 #> 
 #> This package may be cited as:
 #> Dworschak, Christoph. 2021. "Disastr.api: Automated Retrieval
-#> of Disaster Event Data." R package. CRAN version 1.0.2.
+#> of Disaster Event Data." R package. CRAN version 1.0.1.
 #> For the development version of this package, visit <https://github.com/chris-dworschak/disastr.api/>
 
 my.data.frame <- disastr.api( # stores retrieved disaster events in object my.data.frame
