@@ -46,9 +46,9 @@
 #' my.data.frame1 <- disastr.api()
 #' head(my.data.frame1)
 #'
-#' my.data.frame2 <- disastr.api(limit = 200,
+#' my.data.frame2 <- disastr.api(limit = 20,
 #' date.start = "2020-01-31",
-#' date.end = "2020-05-01")
+#' date.end = "2020-04-15")
 #' head(my.data.frame2)
 #' @export
 
