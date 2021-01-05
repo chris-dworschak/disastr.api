@@ -43,7 +43,7 @@ devtools::install_github("chris-dworschak/disastr.api") # downloads and installs
 ## Example
 
 Using `disastr.api` is straight forward. To download data on, for
-example, the last 30 disaster events, you can supply:
+example, the last 20 disaster events, you can supply:
 
 ``` r
 library(disastr.api) # loads the package

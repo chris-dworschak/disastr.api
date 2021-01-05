@@ -35,13 +35,13 @@ This package provides functionality to access and manage the application program
 
 ## Installation
 
-You can install the released version of disastr.api from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of disastr.api from [CRAN](https://CRAN.R-project.org) with: 
 
 ``` r
 install.packages("disastr.api")
 ```
 
-You can install the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with: 
 
 ``` r
 # install.packages("devtools")
@@ -51,7 +51,7 @@ devtools::install_github("chris-dworschak/disastr.api") # downloads and installs
 
 ## Example
 
-Using `disastr.api` is straight forward. To download data on, for example, the last 30 disaster events, you can supply:
+Using `disastr.api` is straight forward. To download data on, for example, the last 20 disaster events, you can supply:
 
 
 ```{r example}
