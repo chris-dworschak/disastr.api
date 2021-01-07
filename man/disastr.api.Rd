@@ -2,7 +2,7 @@
 % Please edit documentation in R/disastr.api.R
 \name{disastr.api}
 \alias{disastr.api}
-\title{Automated Retrieval of Disaster Event Data}
+\title{Wrapper for the UN OCHA ReliefWeb Disaster Events API}
 \usage{
 disastr.api(
   limit = NULL,

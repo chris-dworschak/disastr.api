@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Automated Retrieval of Disaster Event Data
+# Wrapper for the UN OCHA ReliefWeb Disaster Events API
 
 <!-- badges: start -->
 
@@ -59,38 +59,38 @@ my.data.frame <- disastr.api( # stores retrieved disaster events in object my.da
 
 head(my.data.frame) # returns the first five observations of the ACLED sample
 #>      id                      date
-#> 1 50539 2020-12-17T00:00:00+00:00
-#> 2 50536 2020-12-02T00:00:00+00:00
-#> 3 50532 2020-11-27T00:00:00+00:00
-#> 4 50513 2020-11-22T00:00:00+00:00
-#> 5 50506 2020-11-15T00:00:00+00:00
-#> 6 50537 2020-11-14T00:00:00+00:00
+#> 1 50560 2021-01-01T00:00:00+00:00
+#> 2 50539 2020-12-17T00:00:00+00:00
+#> 3 50536 2020-12-02T00:00:00+00:00
+#> 4 50532 2020-11-27T00:00:00+00:00
+#> 5 50513 2020-11-22T00:00:00+00:00
+#> 6 50506 2020-11-15T00:00:00+00:00
 #>                                                                  country
-#> 1                                                          Fiji, Vanuatu
-#> 2                                                              Sri Lanka
-#> 3                                                              Indonesia
-#> 4                                                         Somalia, Yemen
-#> 5 Belize, Colombia, El Salvador, Guatemala, Honduras, Jamaica, Nicaragua
-#> 6                                                               Colombia
+#> 1                                                               Malaysia
+#> 2                                                          Fiji, Vanuatu
+#> 3                                                              Sri Lanka
+#> 4                                                              Indonesia
+#> 5                                                         Somalia, Yemen
+#> 6 Belize, Colombia, El Salvador, Guatemala, Honduras, Jamaica, Nicaragua
 #>                                          name
-#> 1            Tropical Cyclone Yasa - Dec 2020
-#> 2                Sri Lanka: Floods - Dec 2020
-#> 3 Indonesia: Ili Lewotolok Volcano - Nov 2020
-#> 4            Tropical Cyclone Gati - Nov 2020
-#> 5                   Hurricane Iota - Nov 2020
-#> 6  Colombia: Floods and Landslides - Nov 2020
+#> 1                 Malaysia: Floods - Jan 2021
+#> 2            Tropical Cyclone Yasa - Dec 2020
+#> 3                Sri Lanka: Floods - Dec 2020
+#> 4 Indonesia: Ili Lewotolok Volcano - Nov 2020
+#> 5            Tropical Cyclone Gati - Nov 2020
+#> 6                   Hurricane Iota - Nov 2020
 #>                                  event  status
-#> 1 Flash Flood, Flood, Tropical Cyclone current
-#> 2                                Flood current
-#> 3                              Volcano current
-#> 4        Flash Flood, Tropical Cyclone current
-#> 5  Flood, Land Slide, Tropical Cyclone current
-#> 6                    Flood, Land Slide current
+#> 1                    Flood, Land Slide current
+#> 2 Flash Flood, Flood, Tropical Cyclone current
+#> 3                                Flood current
+#> 4                              Volcano current
+#> 5        Flash Flood, Tropical Cyclone current
+#> 6  Flood, Land Slide, Tropical Cyclone current
 #>                                         url
-#> 1 https://reliefweb.int/taxonomy/term/50539
-#> 2 https://reliefweb.int/taxonomy/term/50536
-#> 3 https://reliefweb.int/taxonomy/term/50532
-#> 4 https://reliefweb.int/taxonomy/term/50513
-#> 5 https://reliefweb.int/taxonomy/term/50506
-#> 6 https://reliefweb.int/taxonomy/term/50537
+#> 1 https://reliefweb.int/taxonomy/term/50560
+#> 2 https://reliefweb.int/taxonomy/term/50539
+#> 3 https://reliefweb.int/taxonomy/term/50536
+#> 4 https://reliefweb.int/taxonomy/term/50532
+#> 5 https://reliefweb.int/taxonomy/term/50513
+#> 6 https://reliefweb.int/taxonomy/term/50506
 ```

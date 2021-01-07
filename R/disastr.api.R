@@ -1,4 +1,4 @@
-#' @title Automated Retrieval of Disaster Event Data
+#' @title Wrapper for the UN OCHA ReliefWeb Disaster Events API
 #' @name disastr.api
 #' @description The function `disastr.api()` gives access to the OCHA ReliefWeb API to retrieve a
 #' user-defined sample of [disaster events](https://reliefweb.int/disasters/),

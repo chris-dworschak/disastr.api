@@ -1,7 +1,7 @@
 Package: disastr.api
-Title: Automated Retrieval of Disaster Event Data
-Version: 1.0.2
-Date: 2021-01-05
+Title: Wrapper for the UN OCHA ReliefWeb Disaster Events API
+Version: 1.0.3
+Date: 2021-01-07
 Authors@R: 
     person(given = "Christoph",
            family = "Dworschak",

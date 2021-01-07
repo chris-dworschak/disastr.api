@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 
 
-# Automated Retrieval of Disaster Event Data
+# Wrapper for the UN OCHA ReliefWeb Disaster Events API
 
 <!-- badges: start -->
 ```{r, include = FALSE}
