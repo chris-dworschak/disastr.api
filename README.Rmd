@@ -38,14 +38,13 @@ This package provides functionality to access and manage the application program
 You can install the released version of disastr.api from [CRAN](https://CRAN.R-project.org) with: 
 
 ``` r
-install.packages("disastr.api")
+install.packages("disastr.api") # downloads and installs the package from CRAN
 ```
 
-You can install the development version from [GitHub](https://github.com/) with: 
+You can install the development version from [GitLab](https://gitlab.com/chris-dworschak/) with: 
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("chris-dworschak/disastr.api") # downloads and installs the package
+remotes::install_gitlab("chris-dworschak/disastr.api") # downloads and installs the package from GitLab
 ```
 
 

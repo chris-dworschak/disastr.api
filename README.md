@@ -29,15 +29,14 @@ You can install the released version of disastr.api from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("disastr.api")
+install.packages("disastr.api") # downloads and installs the package from CRAN
 ```
 
 You can install the development version from
-[GitHub](https://github.com/) with:
+[GitLab](https://gitlab.com/chris-dworschak/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("chris-dworschak/disastr.api") # downloads and installs the package
+remotes::install_gitlab("chris-dworschak/disastr.api") # downloads and installs the package from GitLab
 ```
 
 ## Example
@@ -58,39 +57,25 @@ my.data.frame <- disastr.api( # stores retrieved disaster events in object my.da
 #> Your disaster event data request was successful.
 
 head(my.data.frame) # returns the first five observations of the ACLED sample
-#>      id                      date
-#> 1 50560 2021-01-01T00:00:00+00:00
-#> 2 50539 2020-12-17T00:00:00+00:00
-#> 3 50536 2020-12-02T00:00:00+00:00
-#> 4 50532 2020-11-27T00:00:00+00:00
-#> 5 50513 2020-11-22T00:00:00+00:00
-#> 6 50506 2020-11-15T00:00:00+00:00
-#>                                                                  country
-#> 1                                                               Malaysia
-#> 2                                                          Fiji, Vanuatu
-#> 3                                                              Sri Lanka
-#> 4                                                              Indonesia
-#> 5                                                         Somalia, Yemen
-#> 6 Belize, Colombia, El Salvador, Guatemala, Honduras, Jamaica, Nicaragua
-#>                                          name
-#> 1                 Malaysia: Floods - Jan 2021
-#> 2            Tropical Cyclone Yasa - Dec 2020
-#> 3                Sri Lanka: Floods - Dec 2020
-#> 4 Indonesia: Ili Lewotolok Volcano - Nov 2020
-#> 5            Tropical Cyclone Gati - Nov 2020
-#> 6                   Hurricane Iota - Nov 2020
-#>                                  event  status
-#> 1                    Flood, Land Slide current
-#> 2 Flash Flood, Flood, Tropical Cyclone current
-#> 3                                Flood current
-#> 4                              Volcano current
-#> 5        Flash Flood, Tropical Cyclone current
-#> 6  Flood, Land Slide, Tropical Cyclone current
-#>                                         url
-#> 1 https://reliefweb.int/taxonomy/term/50560
-#> 2 https://reliefweb.int/taxonomy/term/50539
-#> 3 https://reliefweb.int/taxonomy/term/50536
-#> 4 https://reliefweb.int/taxonomy/term/50532
-#> 5 https://reliefweb.int/taxonomy/term/50513
-#> 6 https://reliefweb.int/taxonomy/term/50506
+#>      id                      date                                    country
+#> 1 50579 2021-01-18T00:00:00+00:00                       Syrian Arab Republic
+#> 2 50575 2021-01-17T00:00:00+00:00 Eswatini, Madagascar, Mozambique, Zimbabwe
+#> 3 50573 2021-01-15T00:00:00+00:00                                  Indonesia
+#> 4 50574 2021-01-04T00:00:00+00:00                                  Indonesia
+#> 5 50560 2021-01-01T00:00:00+00:00                                   Malaysia
+#> 6 50545 2020-12-18T00:00:00+00:00                                   Mongolia
+#>                                          name                          event
+#> 1                    Syria: Floods - Jan 2021      Flood, Severe Local Storm
+#> 2          Tropical Cyclone Eloise - Jan 2021        Flood, Tropical Cyclone
+#> 3            Indonesia: Earthquake - Jan 2021                     Earthquake
+#> 4 Indonesia: Floods and Landslides - Jan 2021 Flash Flood, Flood, Land Slide
+#> 5                 Malaysia: Floods - Jan 2021              Flood, Land Slide
+#> 6                   Mongolia: Dzud - Dec 2020             Cold Wave, Drought
+#>    status                                       url
+#> 1 current https://reliefweb.int/taxonomy/term/50579
+#> 2 current https://reliefweb.int/taxonomy/term/50575
+#> 3 current https://reliefweb.int/taxonomy/term/50573
+#> 4 current https://reliefweb.int/taxonomy/term/50574
+#> 5 current https://reliefweb.int/taxonomy/term/50560
+#> 6   alert https://reliefweb.int/taxonomy/term/50545
 ```
