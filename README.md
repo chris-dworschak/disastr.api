@@ -49,8 +49,8 @@ library(disastr.api) # loads the package
 #> 
 #> This package may be cited as:
 #> Dworschak, Christoph. 2021. "Disastr.api: Wrapper for the UN OCHA
-#> ReliefWeb Disaster Events API." R package. CRAN version 1.0.3.
-#> For the development version of this package, visit <https://github.com/chris-dworschak/disastr.api/>
+#> ReliefWeb Disaster Events API." R package. CRAN version 1.0.4.
+#> For the development version of this package, visit <https://gitlab.com/chris-dworschak/disastr.api/>
 
 my.data.frame <- disastr.api( # stores retrieved disaster events in object my.data.frame
   limit = 20)

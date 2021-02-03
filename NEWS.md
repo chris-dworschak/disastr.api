@@ -5,6 +5,11 @@
 * Built-in functionality to retrieve all available events (argument all.events) through a for loop
  -->
 
+## disastr.api version 1.0.4
+
+* Links and README updates for GitLab switch
+
+
 ## disastr.api version 1.0.3
 
 * Adjustment to descriptive package & function name
