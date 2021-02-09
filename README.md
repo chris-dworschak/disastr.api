@@ -6,12 +6,12 @@
 <!-- badges: start -->
 
 [![CRAN
-status](https://www.r-pkg.org/badges/version/disastr.api)](https://CRAN.R-project.org/package=disastr.api)
+status](https://www.r-pkg.org/badges/version/disastr.api)](https://CRAN.R-project.org/package=disastr.api/)
 [![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable/)
 [![Travis build
-status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](https://travis-ci.com/gitlab/chris-dworschak/disastr.api)
-[![CRANlogs](http://cranlogs.r-pkg.org/badges/grand-total/disastr.api)](https://CRAN.R-project.org/package=disastr.api)
+status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](https://travis-ci.com/gitlab/chris-dworschak/disastr.api/)
+[![CRANlogs](http://cranlogs.r-pkg.org/badges/grand-total/disastr.api)](https://CRAN.R-project.org/package=disastr.api/)
 <!-- badges: end -->
 
 This package provides functionality to access and manage the application
@@ -57,13 +57,20 @@ my.data.frame <- disastr.api( # stores retrieved disaster events in object my.da
 #> Your disaster event data request was successful.
 
 head(my.data.frame) # returns the first five observations of the ACLED sample
-#>      id                      date                                    country
-#> 1 50579 2021-01-18T00:00:00+00:00                       Syrian Arab Republic
-#> 2 50575 2021-01-17T00:00:00+00:00 Eswatini, Madagascar, Mozambique, Zimbabwe
-#> 3 50573 2021-01-15T00:00:00+00:00                                  Indonesia
-#> 4 50574 2021-01-04T00:00:00+00:00                                  Indonesia
-#> 5 50560 2021-01-01T00:00:00+00:00                                   Malaysia
-#> 6 50545 2020-12-18T00:00:00+00:00                                   Mongolia
+#>      id                      date
+#> 1 50579 2021-01-18T00:00:00+00:00
+#> 2 50575 2021-01-17T00:00:00+00:00
+#> 3 50573 2021-01-15T00:00:00+00:00
+#> 4 50574 2021-01-04T00:00:00+00:00
+#> 5 50560 2021-01-01T00:00:00+00:00
+#> 6 50545 2020-12-18T00:00:00+00:00
+#>                                                    country
+#> 1                                     Syrian Arab Republic
+#> 2 Eswatini, Madagascar, Mozambique, South Africa, Zimbabwe
+#> 3                                                Indonesia
+#> 4                                                Indonesia
+#> 5                                                 Malaysia
+#> 6                                                 Mongolia
 #>                                          name                          event
 #> 1                    Syria: Floods - Jan 2021      Flood, Severe Local Storm
 #> 2          Tropical Cyclone Eloise - Jan 2021        Flood, Tropical Cyclone
