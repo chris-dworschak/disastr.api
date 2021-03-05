@@ -124,7 +124,14 @@ disastr.api <- function(
     }
 
   # other.query argument
-  other.query1 <- ifelse( is.null(other.query)==TRUE, "", paste0("&", paste(other.query, collapse = "&")) )
+  if( is.null(other.query)==TRUE | is.character(other.query)==TRUE ){
+    other.query1 <- ifelse( is.null(other.query)==TRUE,
+                            "",
+                            paste0("&", paste(other.query, collapse = "&")) )   }else{
+                         stop("The argument 'other.query' requires a character vector of additional queries compatible
+                              with the OCHA API, or is set to NULL.", call. = FALSE)
+                       }
+
 
   # GET call
   url <- paste0("https://api.reliefweb.int/v1/disasters?appname=rwint-user-0&profile=list&slim=0",
