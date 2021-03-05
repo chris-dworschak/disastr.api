@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 # Wrapper for the UN OCHA ReliefWeb Disaster Events API
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/disastr.api)](https://CRAN.R-project.org/package=disastr.api/)
+[![CRAN status](https://www.r-pkg.org/badges/version-last-release/disastr.api)](https://CRAN.R-project.org/package=disastr.api/)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable/)
 [![Travis build status](https://travis-ci.com/chris-dworschak/disastr.api.svg?branch=master)](https://travis-ci.com/gitlab/chris-dworschak/disastr.api/)
 [![License: GPL-3](https://img.shields.io/badge/License-GPLv3-lightgrey.svg)](https://www.gnu.org/licenses/gpl-3.0)
