@@ -1,7 +1,7 @@
 #' @title Wrapper for the UN OCHA ReliefWeb Disaster Events API
 #' @name disastr.api
 #' @description The function `disastr.api()` gives access to the OCHA ReliefWeb API to retrieve a
-#' user-defined sample of [disaster events](https://reliefweb.int/disasters/),
+#' user-defined sample of [disaster events](https://reliefweb.int/disasters),
 #' enabling a seamless integration of regular data updates into
 #' the research work flow.
 #' @param limit numeric. Provide the number of events you wish to retrieve. When set to NULL (default), 100 events are returned.
@@ -13,7 +13,7 @@
 #' @param date.end character string. Enter the latest date up to which (and including) events should be retrieved. The date
 #' string must be formatted as "yyyy-mm-dd". When set to NULL (default), data are retrieved up to the latest event.
 #' @param disaster character vector. To return only specific disaster events, this argument takes a character vector of disaster
-#' names. Examples of typical names are "earthquake", "flood", "land slide", "wild fire". See <https://reliefweb.int/disasters/> for
+#' names. Examples of typical names are "earthquake", "flood", "land slide", "wild fire". See <https://reliefweb.int/disasters> for
 #' more disaster names that can be queried. Names are matched with loose OR operators, so that querying "land slide" also returns
 #' events for "mud slide". To do exact matching, set the global _exact.match_ argument to TRUE. In this case, only one disaster type
 #' and one country at a time can be queried.
@@ -32,7 +32,7 @@
 #' GET call. See the [ReliefWeb documentation](https://apidoc.reliefweb.int/) for query details. Vector elements are
 #' assumed to be individual queries, and are automatically separated by an & sign.
 #' @details The function `disastr.api()` is an R wrapper for
-#' the United Nations Office for the Coordination of Humanitarian Affairs' [OCHA ReliefWeb disaster events](https://reliefweb.int/disasters/) API.
+#' the United Nations Office for the Coordination of Humanitarian Affairs' [OCHA ReliefWeb disaster events](https://reliefweb.int/disasters) API.
 #' Internally it uses `httr` to access the API, and `jsonlite` to manage the JSON content that the call returns. The JSON data
 #' are converted into the base class `data.frame`. Variables are of class `character` by default.
 #' Variables which only contain numbers as recognized by the regular
@@ -41,7 +41,7 @@
 #' @import jsonlite
 #' @import httr
 #' @author Christoph Dworschak \cr Website: \url{https://www.chrisdworschak.com/}
-#' @references United Nations Office for the Coordination of Humanitarian Affairs. _ReliefWeb Disasters_. <https://reliefweb.int/disasters/> \cr
+#' @references United Nations Office for the Coordination of Humanitarian Affairs. _ReliefWeb Disasters_. <https://reliefweb.int/disasters> \cr
 #' @examples
 #' my.data.frame1 <- disastr.api()
 #' head(my.data.frame1)
