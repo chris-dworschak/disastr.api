@@ -50,7 +50,7 @@ and only one term per argument at a time can be queried. Use \emph{other.query} 
 recent. If set to TRUE, events will be returned in ascending order starting from the oldest record.}
 
 \item{other.query}{character vector. Allows users to add their own ReliefWeb API queries to the
-GET call. See the \href{https://apidoc.rwlabs.org/}{ReliefWeb documentation} for query details. Vector elements are
+GET call. See the \href{https://apidoc.reliefweb.int/}{ReliefWeb documentation} for query details. Vector elements are
 assumed to be individual queries, and are automatically separated by an & sign.}
 }
 \value{
@@ -83,5 +83,5 @@ head(my.data.frame2)
 United Nations Office for the Coordination of Humanitarian Affairs. \emph{ReliefWeb Disasters}. \url{https://reliefweb.int/disasters/} \cr
 }
 \author{
-Christoph Dworschak \cr Website: \href{https://www.chrisdworschak.com/}{\url{https://chrisdworschak.com/}}
+Christoph Dworschak \cr Website: \url{https://www.chrisdworschak.com/}
 }

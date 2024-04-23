@@ -29,7 +29,7 @@
 #' @param ascending logical. If set to FALSE (default), events will be returned in decreasing order starting from the most
 #' recent. If set to TRUE, events will be returned in ascending order starting from the oldest record.
 #' @param other.query character vector. Allows users to add their own ReliefWeb API queries to the
-#' GET call. See the [ReliefWeb documentation](https://apidoc.rwlabs.org/) for query details. Vector elements are
+#' GET call. See the [ReliefWeb documentation](https://apidoc.reliefweb.int/) for query details. Vector elements are
 #' assumed to be individual queries, and are automatically separated by an & sign.
 #' @details The function `disastr.api()` is an R wrapper for
 #' the United Nations Office for the Coordination of Humanitarian Affairs' [OCHA ReliefWeb disaster events](https://reliefweb.int/disasters/) API.
@@ -40,7 +40,7 @@
 #' @return A data frame containing OCHA ReliefWeb disaster events.
 #' @import jsonlite
 #' @import httr
-#' @author Christoph Dworschak \cr Website: \href{https://www.chrisdworschak.com/}{<https://chrisdworschak.com/>}
+#' @author Christoph Dworschak \cr Website: \url{https://www.chrisdworschak.com/}
 #' @references United Nations Office for the Coordination of Humanitarian Affairs. _ReliefWeb Disasters_. <https://reliefweb.int/disasters/> \cr
 #' @examples
 #' my.data.frame1 <- disastr.api()
