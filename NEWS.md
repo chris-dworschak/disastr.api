@@ -5,6 +5,11 @@
 * Built-in functionality to retrieve all available events (argument all.events) through a for loop
  -->
 
+## disastr.api version 1.0.6
+
+* Revive package after CRAN notification issue
+
+
 ## disastr.api version 1.0.5
 
 * Added license badge

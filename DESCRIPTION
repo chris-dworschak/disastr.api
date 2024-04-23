@@ -1,15 +1,15 @@
 Package: disastr.api
 Title: Wrapper for the UN OCHA ReliefWeb Disaster Events API
-Version: 1.0.5
-Date: 2021-03-05
+Version: 1.0.6
+Date: 2024-04-23
 Authors@R: 
     person(given = "Christoph",
            family = "Dworschak",
            role = c("aut", "cre"),
-           email = "c.dworschak@essex.ac.uk",
+           email = "dworschak@posteo.de",
            comment = c(ORCID = "0000-0003-0196-9545"))
 Author: Christoph Dworschak [aut, cre] (<https://orcid.org/0000-0003-0196-9545>)
-Maintainer: Christoph Dworschak <c.dworschak@essex.ac.uk>
+Maintainer: Christoph Dworschak <dworschak@posteo.de>
 Description: Access and manage the application programming interface (API) of the United Nations Office for the Coordination of Humanitarian Affairs' (OCHA) ReliefWeb disaster events at <https://reliefweb.int/disasters/>. The package requires a minimal number of dependencies. It offers functionality to retrieve a user-defined sample of disaster events from ReliefWeb, providing an easy alternative to scraping the ReliefWeb website. It enables a seamless integration of regular data updates into the research work flow.
 License: GPL-3
 Encoding: UTF-8
