@@ -29,7 +29,7 @@ string must be formatted as "yyyy-mm-dd". When set to NULL (default), the sample
 string must be formatted as "yyyy-mm-dd". When set to NULL (default), data are retrieved up to the latest event.}
 
 \item{disaster}{character vector. To return only specific disaster events, this argument takes a character vector of disaster
-names. Examples of typical names are "earthquake", "flood", "land slide", "wild fire". See \url{https://reliefweb.int/disasters/} for
+names. Examples of typical names are "earthquake", "flood", "land slide", "wild fire". See \url{https://reliefweb.int/disasters} for
 more disaster names that can be queried. Names are matched with loose OR operators, so that querying "land slide" also returns
 events for "mud slide". To do exact matching, set the global \emph{exact.match} argument to TRUE. In this case, only one disaster type
 and one country at a time can be queried.}
@@ -58,13 +58,13 @@ A data frame containing OCHA ReliefWeb disaster events.
 }
 \description{
 The function \code{disastr.api()} gives access to the OCHA ReliefWeb API to retrieve a
-user-defined sample of \href{https://reliefweb.int/disasters/}{disaster events},
+user-defined sample of \href{https://reliefweb.int/disasters}{disaster events},
 enabling a seamless integration of regular data updates into
 the research work flow.
 }
 \details{
 The function \code{disastr.api()} is an R wrapper for
-the United Nations Office for the Coordination of Humanitarian Affairs' \href{https://reliefweb.int/disasters/}{OCHA ReliefWeb disaster events} API.
+the United Nations Office for the Coordination of Humanitarian Affairs' \href{https://reliefweb.int/disasters}{OCHA ReliefWeb disaster events} API.
 Internally it uses \code{httr} to access the API, and \code{jsonlite} to manage the JSON content that the call returns. The JSON data
 are converted into the base class \code{data.frame}. Variables are of class \code{character} by default.
 Variables which only contain numbers as recognized by the regular
@@ -80,7 +80,7 @@ date.end = "2020-04-15")
 head(my.data.frame2)
 }
 \references{
-United Nations Office for the Coordination of Humanitarian Affairs. \emph{ReliefWeb Disasters}. \url{https://reliefweb.int/disasters/} \cr
+United Nations Office for the Coordination of Humanitarian Affairs. \emph{ReliefWeb Disasters}. \url{https://reliefweb.int/disasters} \cr
 }
 \author{
 Christoph Dworschak \cr Website: \url{https://www.chrisdworschak.com/}
