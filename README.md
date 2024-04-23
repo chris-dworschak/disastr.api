@@ -49,10 +49,9 @@ example, the last 20 disaster events, you can supply:
 ``` r
 library(disastr.api) # loads the package
 #> 
-#> This package may be cited as:
+#> The disastR.api package may be cited as:
 #> Dworschak, Christoph. 2021. "Disastr.api: Wrapper for the UN OCHA
-#> ReliefWeb Disaster Events API." R package. CRAN version 1.0.5.
-#> For the development version of this package, visit <https://gitlab.com/chris-dworschak/disastr.api/>
+#> ReliefWeb Disaster Events API." R package. CRAN version 1.0.6.
 
 my.data.frame <- disastr.api( # stores retrieved disaster events in object my.data.frame
   limit = 20)
