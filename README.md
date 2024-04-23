@@ -19,7 +19,7 @@ GPL-3](https://img.shields.io/badge/License-GPLv3-lightgrey.svg)](https://www.gn
 This package provides functionality to access and manage the application
 programming interface (API) of the [United Nations Office for the
 Coordination of Humanitarian Affairs’ (OCHA) ReliefWeb disaster
-events](https://reliefweb.int/disasters/). It requires a minimal number
+events](https://reliefweb.int/disasters). It requires a minimal number
 of dependencies. The function `disastr.api()` makes it easy to retrieve
 a user-defined sample of disaster events from ReliefWeb, enabling a
 seamless integration of regular data updates into the research work
@@ -28,7 +28,7 @@ flow.
 ## Installation
 
 You can install the released version of disastr.api from
-[CRAN](https://CRAN.R-project.org) with:
+[CRAN](https://CRAN.R-project.org/) with:
 
 ``` r
 install.packages("disastr.api") # downloads and installs the package from CRAN
